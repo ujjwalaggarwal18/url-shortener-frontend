@@ -23,7 +23,7 @@ function App() {
     setLoading(true)
 
     try {
-      const response = await fetch('https://url-shortener-backend-51ib.onrender.com', {
+      const response = await fetch('https://url-shortener-backend-51ib.onrender.com/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ originalUrl })
