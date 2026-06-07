@@ -8,7 +8,7 @@ function Analytics({ shortCode, onBack }) {
     useEffect(() => {
         const fetchAnalytics = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/analytics/${shortCode}`)
+                const response = await fetch(`https://url-shortener-backend-51ib.onrender.com/analytics/${shortCode}`)
                 const result = await response.json()
 
                 if (!response.ok) {

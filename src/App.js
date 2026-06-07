@@ -23,7 +23,7 @@ function App() {
     setLoading(true)
 
     try {
-      const response = await fetch('http://localhost:3000/shorten', {
+      const response = await fetch('https://url-shortener-backend-51ib.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ originalUrl })
@@ -37,7 +37,7 @@ function App() {
       }
 
       setShortCode(data.shortCode)
-      setShortUrl(`http://localhost:3000/${data.shortCode}`)
+      setShortUrl(`https://url-shortener-backend-51ib.onrender.com/${data.shortCode}`)
 
     } catch (err) {
       setError('Could not connect to server. Is your backend running?')
